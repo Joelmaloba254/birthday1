@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Birthday Present" />
+  <meta name="author" content="JOEL MALOBA" />
+  
+  <title>Birthday Present</title>
+  <style>
+    /* CSS styles for the animated birthday present */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color:aquamarine;
+    }
+
+    .present {
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+   .navbar {
+      background-color: rgb(6, 26, 26);
+      overflow: hidden;
+    }
+
+    .navbar p {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      animation: slide-in 5s linear infinite;
+    }
+    .navbar-logo {
+      height: 60px;
+      margin-right:auto;
+    }
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+
+    .sliding-text {
+      animation: slide-in 0.5s ease-in-out;
+    }
+    footer{
+
+      background-color: rgb(5, 24, 24);
+      padding: 2px;
+      color: aliceblue;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <p class="sliding-text">JERUSALEM FAMILY</p>
+    <img src="jerlogo.png" alt="Logo" class="navbar-logo">
+  </div>
+  <div class="present">
+    <img src="sarah.png" alt="Birthday Present">
+  </div>
+
+  <h1>Happy Birthday!</h1>
+  <h2><i>SARAH OBADO</i> welcome to your 25<sup>th</sup></h2>
+  <h3>birthday</h3>
+  <p>"Happy birthday to our amazing chairlady! 🎉🎂
+On your special day, we want to express our deepest 
+appreciation for your outstanding leadership, dedication, 
+and tireless efforts. Your guidance has been instrumental 
+in driving our family towards fighting for a <b>Holy Life.</b></p>
+
+  </p>May this birthday bring you joy, fulfillment, 
+and countless beautiful memories. 
+You deserve all the happiness in the world for 
+the incredible work you do.</p>
+
+<p>Thank you for being an inspiration to us all.
+ Wishing you a fantastic birthday filled with love, 
+ laughter, and wonderful surprises! 
+ 🎈🥳"</p>
+ <footer>
+  <p>By: Joel Maloba</p>
+  <p>We <b>JERUSALEM FAMILY</b> love you</P>
+
+ </footer>
+  
+
+  <script>
+    // JavaScript code for the animated birthday present
+    window.onload = function() {
+      var present = document.querySelector('.present');
+      present.addEventListener('click', function() {
+        present.style.animation = 'none';
+        void present.offsetWidth;
+        present.style.animation = 'bounce 2s infinite';
+      });
+    };
+  </script>
+</body>
+</html>
